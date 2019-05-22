@@ -8,20 +8,17 @@
 </head>
 <body>
 <?php
-
+    $height = $weight = '';
     if (isset($_POST["height"])&& isset($_POST["weight"])){
         $weight = (int) $_POST["weight"];
         $height = (int) $_POST["height"];
 
-        $BMI = $weight/( $height*$height);
+        $bmi = $weight/( $height*$height);
 
-        echo "Chỉ số BMI là: " . $BMI;
+        echo "Chỉ số BMI là: " . $bmi;
     }
 
 ?>
-
-
-    <h1>Cách tính chỉ số BMI</h1>
 
     <div class="container">
         <div class="row">
@@ -31,11 +28,11 @@
                 <form name="bmi" action="" method="post">
                     <div class="form-group">
                         <label >Chiều cao ( cm )</label>
-                        <input type="text" class="form-control" name="height" value="">
+                        <input type="text" class="form-control" name="height" value="<?php echo $height?>">
                     </div>
                     <div class="form-group">
                         <label >Cân nặng ( kg ) </label>
-                        <input type="text" class="form-control" name="weight">
+                        <input type="text" class="form-control" name="weight" value="<?php echo $weight ?>">
                     </div>
                     <button type="submit" name="calc" class="btn btn-primary">Submit</button>
                 </form>
