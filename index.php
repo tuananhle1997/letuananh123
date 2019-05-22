@@ -21,17 +21,22 @@
         echo "Chỉ số BMI là: " . $bmi;
 
         if ($bmi < 18.5){
-            echo "Gầy";
+            echo "<br>Gầy";
+
         }elseif ((18.5 < $bmi) && ($bmi < 24.9)){
-            echo "bình thường";
+            echo "<br>Bình thường";
+
         }elseif ((25.0 < $bmi) && ($bmi < 29.9)){
-            echo "Hơi béo";
+            echo "<br>Hơi béo";
+
         }elseif ((30.0 < $bmi) && ($bmi < 34.9)){
-            echo "Béo phì cấp độ 1";
+            echo "<br>Béo phì cấp độ 1";
+
         }elseif ((35.0 < $bmi) && ($bmi < 39.9)){
-            echo "Béo phì cấp độ 2";
+            echo "<br>Béo phì cấp độ 2";
+
         }elseif ($bmi > 40){
-            echo "Béo phì cấp độ 3";
+            echo "<br>Béo phì cấp độ 3";
         }
     }
 
