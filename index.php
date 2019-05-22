@@ -15,7 +15,7 @@
 
         $BMI = $weight/( $height*$height);
 
-        echo "Chỉ số BMI là:";
+        echo "Chỉ số BMI là: " . $BMI;
     }
 
 ?>
@@ -23,18 +23,24 @@
 
     <h1>Cách tính chỉ số BMI</h1>
 
-    <form name="BMI" method="post" action="">
-        <div class="form-group">
-            <label>Chiều cao ( m )</label>
-            <input type="text" class="form-control" name="height" value="">
-        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Tính chỉ số BMI</h1>
 
-        <div class="form-group">
-            <label>Cân nặng ( kg )</label>
-            <input type="text" class="form-control" name="weight">
+                <form name="bmi" action="" method="post">
+                    <div class="form-group">
+                        <label >Chiều cao ( cm )</label>
+                        <input type="text" class="form-control" name="height" value="">
+                    </div>
+                    <div class="form-group">
+                        <label >Cân nặng ( kg ) </label>
+                        <input type="text" class="form-control" name="weight">
+                    </div>
+                    <button type="submit" name="calc" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
-
-        <button type="submit" class="btn btn-primary" name="calc">Submit</button>
-    </form>
+    </div>
 </body>
 </html>
